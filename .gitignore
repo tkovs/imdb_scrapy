@@ -4,3 +4,5 @@
 
 # pycache
 *.pyc
+
+/scrapy_imdb/images/*

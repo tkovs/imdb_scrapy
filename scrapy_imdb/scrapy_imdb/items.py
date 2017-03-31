@@ -5,7 +5,9 @@ class MovieItem(scrapy.Item):
     duration    = scrapy.Field()
     genre       = scrapy.Field()
     description = scrapy.Field()
-    stars       = scrapy.Field()
     director    = scrapy.Field()
     stars       = scrapy.Field()
     metascore   = scrapy.Field()
+
+    image_urls  = scrapy.Field()
+    images      = scrapy.Field()
