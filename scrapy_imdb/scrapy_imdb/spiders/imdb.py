@@ -20,6 +20,6 @@ class ImdbSpider(Spider):
             item['metascore']   = movie.css('div.metascore strong::text').extract_first()
             item['description'] = movie.css('div[itemprop=description]::text').extract_first()
 
-            item['image_urls']  = [movie.css('div.image img::attr(src)').extract_first()]
+            item['image_urls']  = movie.css('div.image img::attr(src)').extract()
 
             yield item

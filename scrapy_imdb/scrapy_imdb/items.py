@@ -1,13 +1,13 @@
 import scrapy
 
 class MovieItem(scrapy.Item):
-    title       = scrapy.Field()
-    duration    = scrapy.Field()
-    genre       = scrapy.Field()
-    description = scrapy.Field()
-    director    = scrapy.Field()
-    stars       = scrapy.Field()
-    metascore   = scrapy.Field()
+	title       = scrapy.Field()
+	duration    = scrapy.Field()
+	genre       = scrapy.Field()
+	description = scrapy.Field()
+	director    = scrapy.Field()
+	stars       = scrapy.Field()
+	metascore   = scrapy.Field()
 
-    image_urls  = scrapy.Field()
-    images      = scrapy.Field()
+	image_urls  = scrapy.Field()
+	images      = scrapy.Field()
