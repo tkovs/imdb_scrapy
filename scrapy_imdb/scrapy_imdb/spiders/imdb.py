@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import scrapy
-
+from scrapy            import Spider
 from scrapy_imdb.items import MovieItem
 
-class ImdbSpider(scrapy.Spider):
+class ImdbSpider(Spider):
     name = 'imdb'
     allowed_domains = ['imdb.com']
     start_urls = ['http://www.imdb.com/movies-in-theaters/?ref_=nv_mv_inth_1',]

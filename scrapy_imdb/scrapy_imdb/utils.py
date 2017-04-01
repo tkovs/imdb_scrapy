@@ -1,3 +1,12 @@
+def fix_item(item):
+	"""Fixes some *problems*"""
+	
+	item['title']       = fix_title(item['title'])
+	item['metascore']   = check_metascore(item['metascore'])
+	item['description'] = fix_description(item['description'])
+
+	return item
+
 def fix_description(description):
 	"""Removes unnecessary characters
 	
@@ -13,7 +22,7 @@ def fix_description(description):
 	return description
 
 def fix_title(title):
-	"""Erases the space before each title"""
+	"""Erases an space character before each title"""
 
 	title = title[1:]
 
