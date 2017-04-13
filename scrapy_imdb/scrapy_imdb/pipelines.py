@@ -29,4 +29,4 @@ class MyImagesPipeline(ImagesPipeline):
 		item = request.meta['item']
 		image_guid = request.url.split('/')[-1]
 		
-		return 'full/%s.jpg' % item['title']
+		return 'full/{0}.jpg'.format(item['title'])
