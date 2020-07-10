@@ -17,7 +17,7 @@ def fix_description(description):
 	
 	description = description.replace('\n', '')
 	description.encode('utf-8')
-	description = description[:-20]
+	description = description.strip()
 
 	return description
 
@@ -33,6 +33,6 @@ def check_metascore(metascore):
 
 	#some movies has no metascore, so scrapy returns null
 	if metascore is not None:
-		return metascore + '/100'
+		return metascore.strip() + '/100'
 
 	return None

@@ -7,7 +7,7 @@ from .utils                  import fix_item
 
 class JsonWriterPipeline(object):
 	def open_spider(self, spider):
-		self.file = open('movies.jl', 'wb')
+		self.file = open('movies.json', 'wb')
 
 	def close_spider(self, spider):
 		self.file.close()

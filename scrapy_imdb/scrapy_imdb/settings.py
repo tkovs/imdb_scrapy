@@ -16,5 +16,5 @@ IMAGES_STORE = 'images/'
 
 ITEM_PIPELINES = {
     'scrapy_imdb.pipelines.JsonWriterPipeline': 998,
-	'scrapy_imdb.pipelines.MyImagesPipeline': 999,
+	# 'scrapy_imdb.pipelines.MyImagesPipeline': 999,
 }
