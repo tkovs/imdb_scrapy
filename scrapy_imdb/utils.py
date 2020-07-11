@@ -1,6 +1,6 @@
 def polishes_item(item):
   item['title'] = polishes_title(item['title'])
-  item['year'] = extract_year(item['year'])
+  item['year'] = polishes_year(item['year'])
   item['metascore'] = polishes_metascore(item['metascore'])
   item['description'] = polishes_description(item['description'])
 
@@ -23,5 +23,5 @@ def polishes_metascore(metascore):
 
   return metascore.strip() + '/100'
 
-def extract_year(year):
+def polishes_year(year):
   return year[-5:-1]
