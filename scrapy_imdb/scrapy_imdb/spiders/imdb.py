@@ -13,6 +13,7 @@ class ImdbSpider(Spider):
             item = MovieItem()
 
             item['title']       = movie.css('h4 a::text').extract_first()
+            item['year']        = item['title']
             item['genre']       = movie.css('.cert-runtime-genre span:not([class^="ghost"])::text').extract()
             item['stars']       = movie.css('.txt-block')[1].css('a::text').extract()
             item['director']    = movie.css('.txt-block a::text').extract_first()
