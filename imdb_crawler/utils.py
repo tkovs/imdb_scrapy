@@ -2,13 +2,13 @@ def fix_item(item):
 	"""Fixes some *problems*"""
 	
 	item['title']       = fix_title(item['title'])
-	item['year']        = fix_year(item['year'])
+	item['year']        = extract_year(item['year'])
 	item['metascore']   = check_metascore(item['metascore'])
 	item['description'] = fix_description(item['description'])
 
 	return item
 
-def fix_year(year):
+def extract_year(year):
 	return year[-5:-1]
 
 def fix_description(description):

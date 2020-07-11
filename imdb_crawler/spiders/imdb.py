@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from scrapy            import Spider
-from scrapy_imdb.items import MovieItem
+from imdb_crawler.items import MovieItem
 
 class ImdbSpider(Spider):
     name = 'imdb'

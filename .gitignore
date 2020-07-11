@@ -1,8 +1,22 @@
-# scrapy's result
-*.jl
+/imdb_crawler/images
+
+.pytest_cache
+__pycache__
+*.egg-info
+.cache
+*.prof
+*.vmprof
+*.log
+*.txt
+!LICENSE.txt
+!requirements.txt
+*.html
+*.csv
+*.gz
+!docker/deep-deep-0.0.tar.gz
+*.joblib
 *.json
-
-# pycache
-*.pyc
-
-/scrapy_imdb/images
+*.jl
+out/
+build
+dist

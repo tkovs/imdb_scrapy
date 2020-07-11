@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-BOT_NAME = 'scrapy_imdb'
+BOT_NAME = 'imdb_crawler'
 
-SPIDER_MODULES   = ['scrapy_imdb.spiders']
-NEWSPIDER_MODULE = 'scrapy_imdb.spiders'
+SPIDER_MODULES   = ['imdb_crawler.spiders']
+NEWSPIDER_MODULE = 'imdb_crawler.spiders'
 
 AUTOTHROTTLE_MAX_DELAY = 60
 AUTOTHROTTLE_ENABLED   = True
@@ -15,6 +15,6 @@ RETRY_TIMES            = 5
 IMAGES_STORE = 'images/'
 
 ITEM_PIPELINES = {
-    'scrapy_imdb.pipelines.JsonWriterPipeline': 998,
-	'scrapy_imdb.pipelines.MyImagesPipeline': 999,
+  'imdb_crawler.pipelines.JsonWriterPipeline': 998,
+  'imdb_crawler.pipelines.MyImagesPipeline': 999,
 }
