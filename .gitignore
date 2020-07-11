@@ -1,5 +1,3 @@
-/imdb_crawler/images
-
 .pytest_cache
 __pycache__
 *.egg-info
@@ -20,3 +18,4 @@ __pycache__
 out/
 build
 dist
+images

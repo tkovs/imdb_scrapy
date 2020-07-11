@@ -3,9 +3,8 @@
 You will need the python and pip installed. Run:
 
 ```sh
-pip3 install scrapy image
-cd imdb_crawler
+python3 setup.py install
 scrapy crawl imdb
 ```
 
-After run, check the `imdb_crawler/movies.jl` file for the data. Check the `imdb_crawler/images/full` for the images.
+After run, check the `scrapy_imdb/movies.jl` file for the data. Check the `scrapy_imdb/images/full` for the images.

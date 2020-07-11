@@ -1,4 +1,4 @@
-from imdb_crawler.utils import *
+from scrapy_imdb.utils import *
 
 def test_extract_year():
 	mock_title = 'Saint Maud (2019)'
