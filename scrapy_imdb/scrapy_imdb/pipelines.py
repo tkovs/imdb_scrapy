@@ -7,15 +7,15 @@ from .utils                  import fix_item
 
 class JsonWriterPipeline(object):
 	def open_spider(self, spider):
-		self.file = open('movies.json', 'wb')
+		self.file = open('movies.jl', 'wb')
 
 	def close_spider(self, spider):
 		self.file.close()
 
 	def process_item(self, item, spider):
 		item = fix_item(item)
-
 		line = json.dumps(dict(item)) + '\n'
+
 		self.file.write(line.encode())
 		
 		return item
