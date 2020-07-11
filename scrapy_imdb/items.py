@@ -11,4 +11,3 @@ class MovieItem(scrapy.Item):
 	metascore   = scrapy.Field()
 
 	image_urls  = scrapy.Field()
-	images      = scrapy.Field()
