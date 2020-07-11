@@ -5,4 +5,4 @@
 # pycache
 *.pyc
 
-/scrapy_imdb/images/*
+/scrapy_imdb/images
