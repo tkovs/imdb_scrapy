@@ -3,7 +3,7 @@ import json
 import scrapy
 
 from scrapy.pipelines.images import ImagesPipeline
-from .utils                  import fix_item
+from .utils import polishes_item
 
 class JsonWriterPipeline(object):
 	def open_spider(self, spider):
@@ -13,9 +13,8 @@ class JsonWriterPipeline(object):
 		self.file.close()
 
 	def process_item(self, item, spider):
-		item = fix_item(item)
-		line = json.dumps(dict(item)) + '\n'
-
+		polished_item = polishes_item(item)
+		line = json.dumps(dict(polished_item)) + '\n'
 		self.file.write(line.encode())
 		
 		return item
@@ -29,4 +28,4 @@ class MyImagesPipeline(ImagesPipeline):
 		item = request.meta['item']
 		image_guid = request.url.split('/')[-1]
 		
-		return 'full/{0}.jpg'.format(item['title'])
+		return '{0}.jpg'.format(item['title'])
