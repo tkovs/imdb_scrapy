@@ -1,4 +1,4 @@
-from scrapy_imdb.utils import *
+from crawler_imdb.utils import *
 
 mock_title = ' Saint Maud (2019)'
 mock_metascore = '87    '

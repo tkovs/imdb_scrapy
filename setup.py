@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-  name='scrapy_imdb',
-  packages=['scrapy_imdb'],
+  name='crawler_imdb',
+  packages=['crawler_imdb'],
   install_requires=[
     'scrapy',
     'image',

@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
+import scrapy
+from crawler_imdb.items import MovieItem
 
-from scrapy import Spider
-from scrapy_imdb.items import MovieItem
-
-class ImdbSpider(Spider):
-  name = 'imdb'
-  allowed_domains = ['imdb.com']
-  start_urls = ['https://www.imdb.com/movies-coming-soon/?ref_=inth_cs',]
+class ComingSoonSpider(scrapy.Spider):
+  name = "comingsoon"
+  start_urls = [
+    'https://www.imdb.com/movies-coming-soon/?ref_=inth_cs'
+  ]
 
   def parse(self, response):
     for movie in response.css('div.list_item'):
